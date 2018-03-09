@@ -1,0 +1,78 @@
+// global.scss                         styles/partials
+/////////////////////////////////////////////////////////////////////////
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  outline: none;
+}
+
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba($black, 0);
+  -webkit-font-smoothing: antialiased;
+  -ms-overflow-style: none;
+}
+
+html,
+body {
+  background-color: $mercury;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.42857143;
+  color: $mine;
+  &.active {
+    overflow: hidden;
+    z-index: -1;
+  }
+}
+
+// Link styles
+a {
+  color: $base-color;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+// Rounded White buttons
+.btn-rounded-white {
+  display: inline-block;
+  color: $white;
+  padding: rem-calc(16 24);
+  border: rem-calc(3) solid $white;
+  border-radius: rem-calc(30);
+  transition: $link-transition;
+  &:hover {
+    color: darken($base-color, 25%);
+    background-color: rgba($white, .5);
+  }
+}
+
+// Headings w/ underline
+.heading {
+  position: relative;
+  display: inline-block;
+  font-size: rem-calc(32);
+  font-weight: 300;
+  margin: rem-calc(0 0 30 0);
+  &:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    height: rem-calc(2);
+    width: rem-calc(50);
+    margin: 0 auto;
+    background: $base-color;
+  }
+}

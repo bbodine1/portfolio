@@ -1,0 +1,90 @@
+// footer.scss                         styles/partials
+/////////////////////////////////////////////////////////////////////////
+
+// Section layout
+section.footer {
+  width: 100%;
+}
+
+// Footer container
+.footer footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  height: rem-calc(150); // <---------------
+  width: 100%;
+  max-width: rem-calc(970);
+  margin: 0 auto;
+  padding: rem-calc(16);
+  position: relative;
+  @media #{$medium-up} {
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    padding: rem-calc(36 16);
+  }
+}
+
+// To Top button
+.footer span {
+  order: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: rem-calc(36);
+  width: rem-calc(36);
+  border-radius: 50%;
+  border: rem-calc(3) solid lighten($text, 25%);
+  margin-bottom: rem-calc(16);
+  transition: $link-transition;
+  position: absolute;
+  top: rem-calc(16);
+  left: 50%;
+  transform: translate(-50%);
+  @media #{$medium-up} {
+    margin-bottom: 0;
+  }
+  &:hover {
+    background-color: $background;
+  }
+  i {
+    color: $text;
+    transform: translate(0, -2px);
+  }
+}
+
+// Copyright styles
+.footer p {
+  color: $text;
+  margin: 0;
+  margin-bottom: rem-calc(16);
+  order: 2;
+  @media #{$medium-up} {
+    margin-bottom: 0;
+    order: 1;
+  }
+}
+
+// Social link container
+.footer div {
+  display: flex;
+  order: 3;
+}
+
+// Social Link styles
+.footer div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text;
+  height: rem-calc(32);
+  width: rem-calc(32);
+  border-radius: 100%;
+  transition: $link-transition;
+  &:hover {
+    color: $base-color;
+    background-color: $background;
+  }
+}

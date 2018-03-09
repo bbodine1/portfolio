@@ -1,0 +1,91 @@
+// contact.scss                         styles/partials
+/////////////////////////////////////////////////////////////////////////
+
+// Section layout
+section.contact {
+  width: 100%;
+  background-color: $base-color;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: rem-calc(76 16);
+  @media #{$medium-up} {
+    padding: rem-calc(76 48);
+  }
+}
+
+// Contact Heading
+.contact h2 {
+  margin: rem-calc(0 0 16 0);
+  color: $white;
+  font-weight: 500;
+  line-height: 1;
+  @media #{$medium-up} {
+    margin: rem-calc(0 0 32 0);
+  }
+}
+
+// Form Layout
+.contact form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: rem-calc(500);
+}
+
+// Form Elements
+.contact form input,
+.contact form textarea {
+  @include placeholder {
+    color: rgba($white, .5);
+  }
+  width: 100%;
+  padding: rem-calc(8);
+  border-radius: rem-calc(4);
+  border: none;
+  background: darken($base-color, 15%);
+  color: $white;
+  margin-bottom: rem-calc(8);
+  transition: $link-transition;
+  @media #{$medium-up} {
+    margin-bottom: rem-calc(16);
+  }
+  &:focus {
+    outline: none;
+    background: darken($base-color, 25%);
+  }
+}
+
+// Textarea only
+.contact form textarea {
+  height: rem-calc(150);
+  resize: none;
+}
+
+// Button styles
+.contact form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: rem-calc(48);
+  width: 100%;
+  background: $white;
+  border-radius: rem-calc(4);
+  border: none;
+  padding: rem-calc(5 10);
+  color: $base-color;
+  font-size: rem-calc(18);
+  font-weight: 700;
+  box-shadow: rem-calc(0 1 3) rgba($black, 0.12),
+              rem-calc(0 1 2) rgba($black, 0.24);
+  cursor: pointer;
+  transition: $link-transition;
+  @media #{$medium-up} {
+    width: rem-calc(200);
+  }
+  &:hover {
+    box-shadow: rem-calc(0 10 20) rgba($black, 0.19),
+                rem-calc(0 6 6) rgba($black, 0.23);
+  }
+}

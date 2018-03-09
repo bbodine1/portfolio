@@ -1,0 +1,58 @@
+// education.scss                         styles/partials
+/////////////////////////////////////////////////////////////////////////
+
+// Section layout
+#education {
+  width: 100%;
+  border-bottom: rem-calc(1) solid $border;
+}
+
+// Education container
+#education > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: rem-calc(970);
+  margin: 0 auto;
+  padding: rem-calc(32 16);
+  @media #{$medium-up} {
+    padding: rem-calc(76 16);
+  }
+}
+
+// Education block container
+#education .education-block {
+  max-width: rem-calc(700);
+  padding: rem-calc(16);
+  border: rem-calc(1) solid $border;
+  &:not(:last-of-type) {
+    margin-bottom: rem-calc(32);
+  }
+}
+
+// Ed block header
+#education .education-block .header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+// Name
+#education h3 {
+  color: $heading;
+  margin: 0;
+}
+
+// Focus
+#education h4 {
+  color: $text;
+  font-weight: 500;
+  margin: 0;
+}
+
+// Text
+#education p {
+  color: $text;
+  font-weight: 300;
+}

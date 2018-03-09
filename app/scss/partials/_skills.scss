@@ -1,0 +1,45 @@
+// experience.scss                         styles/partials
+/////////////////////////////////////////////////////////////////////////
+
+// Section layout
+section.skills {
+  width: 100%;
+}
+
+// Skills container
+.skills > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: rem-calc(970);
+  margin: 0 auto;
+  padding: rem-calc(32 16);
+  @media #{$medium-up} {
+    padding: rem-calc(76 16);
+  }
+}
+
+// Skill item container
+.skills .skill-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  max-width: rem-calc(500);
+}
+
+// Skill item
+.skills span {
+  padding: rem-calc(5 10);
+  color: $heading;
+  background: darken($background-alt, 10%);
+  list-style: none;
+  cursor: default;
+  font-size: 1.2em;
+  border-radius: rem-calc(4);
+  margin-bottom: rem-calc(8);
+  &:not(:last-of-type) {
+    margin-right: rem-calc(8);
+  }
+}

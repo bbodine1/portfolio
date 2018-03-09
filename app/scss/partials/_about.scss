@@ -1,0 +1,34 @@
+// about.scss                         styles/partials
+/////////////////////////////////////////////////////////////////////////
+
+// Section layout
+#about {
+  width: 100%;
+}
+
+// About container
+#about > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: rem-calc(970);
+  margin: 0 auto;
+  padding: rem-calc(32 16);
+  @media #{$medium-up} {
+    padding: rem-calc(76 16);
+  }
+}
+
+// About heading
+#about h2 {
+  color: $heading;
+}
+
+// About text
+#about p {
+  color: $text;
+  font-size: rem-calc(18);
+  font-weight: 300;
+  margin: 0;
+}

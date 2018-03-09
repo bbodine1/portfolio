@@ -1,0 +1,125 @@
+// experience.scss                         styles/partials
+/////////////////////////////////////////////////////////////////////////
+
+// Section layout
+#experience {
+  width: 100%;
+  border-bottom: rem-calc(1) solid $border;
+  background-color: $background-alt;
+}
+
+// Experience Section inner container
+#experience > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: rem-calc(970);
+  margin: 0 auto;
+  padding: rem-calc(32 16);
+  @media #{$medium-up} {
+    padding: rem-calc(76 16);
+  }
+}
+
+// Experience block layout
+#experience .experience-block {
+  display: grid;
+  grid-template-columns: rem-calc(70) 1fr;
+  padding: rem-calc(8);
+  @media #{$medium-up} {
+    grid-template-columns: rem-calc(240) rem-calc(100) 1fr;
+  }
+}
+
+// Timeline line
+#experience .experience-block {
+  .icon:after {
+    content: "";
+    position: absolute;
+    top: rem-calc(18);
+    height: 100%;
+    width: rem-calc(3);
+    background: linear-gradient(to bottom, $base-color, rgba($base-color, 0));
+  }
+  &:not(:last-of-type) {
+    .icon:after {
+      background: $base-color;
+    }
+  }
+}
+
+// Timeline icon area
+#experience .experience-block .icon {
+  grid-row: span 2;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  @media #{$medium-up} {
+    grid-column: 2;
+  }
+}
+
+// Icon styles
+#experience .experience-block .icon span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  width: rem-calc(50);
+  height: rem-calc(50);
+  background: $base-color;
+  border-radius: 50%;
+  z-index: 1;
+  i {
+    font-size: 2em;
+  }
+}
+
+// Dates area layout
+#experience .experience-block .dates {
+  @media #{$medium-up} {
+    grid-column: 1;
+  }
+}
+
+// Dates styles
+#experience .dates {
+  font-size: rem-calc(14);
+  font-weight: 300;
+  color: #374054;
+  margin: rem-calc(16 0 8);
+  @media #{$medium-up} {
+    text-align: right;
+  }
+}
+
+// Info area layout
+#experience .experience-block .info {
+  padding: rem-calc(8);
+}
+
+// Info area styles
+#experience .info {
+  background: $white;
+  border: rem-calc(1) solid $mercury;
+  padding: rem-calc(16);
+  border-radius: rem-calc(3);
+  h3 {
+    font-size: rem-calc(22);
+    font-weight: 300;
+    color: $heading;
+    margin: 0;
+  }
+  h4 {
+    font-size: rem-calc(18);
+    font-weight: 300;
+    color: $raven;
+    margin: rem-calc(0 0 16);
+  }
+  p {
+    color: $text;
+    font-size: rem-calc(15);
+    margin: 0;
+  }
+}

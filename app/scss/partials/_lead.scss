@@ -1,0 +1,111 @@
+// lead.scss                         styles/partials
+/////////////////////////////////////////////////////////////////////////
+
+// Section layout
+#lead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  min-height: rem-calc(500);
+  max-height: rem-calc(1080);
+  position: relative;
+  z-index: 1;
+  background-image: url(../images/lead-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: rem-calc(16);
+  overflow: hidden;
+}
+
+// Lead section overlay
+#lead:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba($base-color-hover, 0.8);
+}
+
+// Skills container
+#lead > main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: rem-calc(970);
+  margin: 0 auto;
+  padding: rem-calc(16);
+}
+
+// Main heading
+#lead h1 {
+  color: $white;
+  font-weight: 900;
+  font-size: rem-calc(48);
+  text-transform: uppercase;
+  letter-spacing: rem-calc(3.8);
+  line-height: 1;
+  text-align: center;
+  margin: 0;
+  @media #{$medium-up} {
+    font-size: rem-calc(76);
+  }
+}
+
+// Sub heading
+#lead h2 {
+  color: lighten($base-color, 25%);
+  font-weight: 500;
+  font-size: rem-calc(24);
+  margin: 0;
+  margin-bottom: rem-calc(16);
+  text-align: center;
+  @media #{$medium-up} {
+    font-size: rem-calc(36);
+  }
+}
+
+// Down one level button
+#lead span {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: rem-calc(36);
+  width: rem-calc(36);
+  border-radius: 50%;
+  border: rem-calc(3) solid lighten($text, 25%);
+  margin-bottom: rem-calc(16);
+  position: absolute;
+  bottom: rem-calc(128);
+  z-index: 1;
+  transition: $link-transition;
+  &:hover {
+    background-color: rgba($white, 0.1);
+  }
+  @media #{$medium-up} {
+    margin-bottom: 0;
+    bottom: rem-calc(48);
+  }
+  @media #{$large-up} {
+    bottom: rem-calc(16);
+  }
+  i {
+    color: lighten($text, 25%);
+    transform: translate(0, -1px);
+    animation: pulsate 1.5s ease;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes pulsate {
+  0% {    transform: scale(1, 1); }
+  50% {   transform: scale(1.2, 1.2); }
+  100% {  transform: scale(1, 1); }
+}

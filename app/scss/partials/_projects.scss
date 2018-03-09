@@ -1,0 +1,83 @@
+// projects.scss                         styles/partials
+/////////////////////////////////////////////////////////////////////////
+
+// Section layout
+#projects {
+  width: 100%;
+  background-color: $background-alt;
+}
+
+// Projects container
+#projects > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: rem-calc(970);
+  margin: 0 auto;
+  padding: rem-calc(32 16);
+  @media #{$medium-up} {
+    padding: rem-calc(76 16);
+  }
+}
+
+// Project layout
+#projects .project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: rem-calc(6);
+  overflow: hidden;
+  box-shadow: 
+    rem-calc(0 3 6) rgba($black, 0.08),
+    rem-calc(0 3 6) rgba($black, 0.15);
+  &:not(:last-of-type) {
+    margin-bottom: rem-calc(16);
+    @media #{$medium-up} {
+      margin-bottom: rem-calc(32);
+    }
+  }
+}
+
+// Project Image
+#projects .project img {
+  display: none;
+  height: rem-calc(300);
+  width: rem-calc(300);
+  @media #{$medium-up} {
+    display: block;
+  }
+}
+
+// Project info layout
+#projects .project .project-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: rem-calc(16);
+  @media #{$medium-up} {
+    padding: rem-calc(32);
+  }
+}
+
+// Project title
+#projects .project h3 {
+  font-size: rem-calc(24);
+  font-weight: 300;
+  color: $heading;
+  margin: rem-calc(0 0 16 0);
+}
+
+// Project info text
+#project .projects p {
+  color: $text;
+  margin: rem-calc(0 0 16 0);
+  font-size: rem-calc(15);
+  font-weight: 300;
+}
+
+// Hide extra projects container
+#more-projects {
+  display: none;
+}

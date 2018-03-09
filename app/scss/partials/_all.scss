@@ -1,0 +1,16 @@
+// all.scss                         styles/partials
+/////////////////////////////////////////////////////////////////////////
+
+@import "./header";
+@import "./lead";
+@import "./about";
+@import "./experience";
+@import "./education";
+@import "./projects";
+@import "./skills";
+@import "./contact";
+@import "./footer";
+
+// Last imported files are global and shame
+@import "./global"; // This include should be next to last
+@import "./shame"; // This include should be last
