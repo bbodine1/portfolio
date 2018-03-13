@@ -22,6 +22,7 @@ gulp.task('copy', function() {
   gulp
     .src([
       src + '/index.html',
+      src + '/404.html',
       src + '/favicon.ico',
       src + '/_redirects',
       src + '/css*/**/*',
