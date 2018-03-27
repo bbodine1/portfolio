@@ -1,3 +1,16 @@
-# This is the README.md
+# Brad Bodine Portfolio Website
 
-You can read it.
+#### Live Site Location
+https://bradbodine.com
+
+### Install
+- clone this repo
+- cd into the cloned folder
+- run `npm i`
+
+### Running the project
+- run `npm start` for the local dev server on port 3000
+
+### Build the project
+- run `npm run build` to build in the "dist/" directory
+
