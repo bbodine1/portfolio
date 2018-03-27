@@ -4,7 +4,7 @@
 // Mobile menu open and close button styles
 #mobile-menu-open,
 #mobile-menu-close {
-  display: block;
+  display: flex;
   cursor: pointer;
   position: fixed;
   right: rem-calc(16);
@@ -12,7 +12,7 @@
   color: $base-color;
   font-size: rem-calc(22);
   z-index: 2;
-  padding: rem-calc(2 8);
+  padding: rem-calc(4 8);
   border-radius: rem-calc(4);
   background: $background;
   box-shadow: 
@@ -29,7 +29,8 @@
 // Close button specific
 #mobile-menu-close {
   .active & {
-    display: block;
+    display: flex;
+    align-items: center;
   }
 }
 

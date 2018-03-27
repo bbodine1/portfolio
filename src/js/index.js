@@ -1,3 +1,5 @@
+import myFonts from './fontawesome';
+
 let docBody = document.body;
 let docEl = document.documentElement;
 let moreProjects = document.querySelector('#more-projects');
