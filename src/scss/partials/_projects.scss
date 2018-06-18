@@ -44,6 +44,7 @@
   display: none;
   height: rem-calc(300);
   width: rem-calc(300);
+  flex: 1;
   @media #{$medium-up} {
     display: block;
   }
